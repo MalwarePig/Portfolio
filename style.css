@@ -1,0 +1,21 @@
+body{
+    background-color: #1a191d;
+    color: aliceblue;
+}
+
+header{
+    background: rebeccapurple;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center; 
+}
+
+ul{
+    display: flex;
+    flex-direction: row; 
+    gap: 40px;
+    list-style: none;
+}
