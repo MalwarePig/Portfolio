@@ -1,21 +1,207 @@
-body{
-    background-color: #1a191d;
-    color: aliceblue;
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --bg-prim: #050507;
+  --bg-sec: #0d0c14;
+  --bg-ter: #171c31;
+  --color-prim: #f7f7f8;
+  --color-sec: #a1a0ab;
+  --color-ter: #853bce;
+  --border-gray: #211f2d;
+}
+html {
+  scroll-behavior: smooth;
 }
 
-header{
-    background: rebeccapurple;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center; 
+body {
+  background-color: var(--bg-prim);
+  color: var(--color-prim);
 }
 
-ul{
-    display: flex;
-    flex-direction: row; 
-    gap: 40px;
-    list-style: none;
+header {
+  color: var(--color-ter);
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  list-style: none;
+}
+
+li {
+  font-family: Poppins, "Courier New", Courier, monospace;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-weight: bold;
+}
+h1 {
+  font-family: Poppins, "Courier New", Courier, monospace;
+  font-size: 5rem;
+  margin: 0px;
+  font-weight: bold;
+}
+h3 {
+  font-family: Poppins, "Courier New", Courier, monospace;
+  font-size: 2rem;
+  margin: 0px;
+  text-transform: uppercase;
+}
+
+section {
+  background-color: rgb(37, 34, 34);
+  padding-top: 10%;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* Inicio */
+.perfil-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: var(--border-gray) 1px solid;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+/* Experencias */
+
+.Experiencia {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.Exp-Backend,
+.Exp-frontend,
+.Exp-Otros {
+  border: var(--border-gray) 1px solid;
+  width: 300px; /* ancho fijo */
+  height: 300px; /* alto igual al ancho */
+}
+
+/* Proyectos y Galeria */
+.Proyectos {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.galeria-proyectos {
+  width: 700px;
+  height: 700px;
+  max-width: 700px;
+  max-height: 700px;
+  background-color: rgb(77, 228, 17);
+  border-radius: 24px;
+}
+.galeria-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lista-proyectos {
+  width: 700px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+}
+.lista-proyectos ul {
+  width: 100%;
+  padding: 0;
+  margin: 20px 0px;
+}
+
+.lista-proyectos li {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  min-height: 40px;
+  box-sizing: border-box;
+  font-size: 2rem;
+  border-top: 2px solid var(--color-ter); /* Cambia el color y grosor a tu gusto */
+}
+
+.lista-proyectos li:hover {
+  background-color: var(--bg-ter);
+  color: var(--color-ter);
+}
+
+/* .lista-proyectos li > div {
+  flex: 1;
+} */
+
+.lista-proyectos li > div:first-child {
+  flex: 1;
+  text-align: left;
+  align-items: center;
+}
+
+.lista-proyectos li > div:last-child {
+  flex: 2;
+  text-align: right;
+  margin-top: 15px;
+}
+
+.proyectos-tec {
+  font-size: 1.5rem;
+}
+
+/* Acerca de */
+
+.Acerca {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 0px;
+  min-height: 75vh;
+}
+
+.biografia {
+  padding-top: 0;
+  margin-top: 0;
+  width: 70%;
+}
+
+.biografia p {
+  font-family: Poppins, "Courier New", Courier, monospace;
+  font-size: 1.2rem;
+  color: var(--color-sec);
+  line-height: 2rem;
+  text-align: justify; 
+}
+
+.Marquecina {
+  border-top: 2px solid var(--color-ter);
+  border-bottom: 2px solid var(--color-ter);
+  width: 90%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+
+.Marquecina p {
+  font-family: 'Bebas Neue', "Courier New", Courier, monospace;
+  margin-right: 20px;
+  font-size: 213px;
+  line-height: 213px;
+  letter-spacing: -.90rem;
+  font-weight: bold;
+  display: inline-block;
+  color: var(--color-sec);
+}
+
+
+

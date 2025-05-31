@@ -1,106 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <script src="./src/public/js/functions.js"></script>
     <title>Sergio Magaña - Portafolio</title>
 </head>
-<body>
+
+<body onload="Mensajes()">
     <header>
-        <ul>
-            <li>// home</li>
-            <li>// work</li>
-            <li>// skills</li>
-            <li>// contact</li>
+        <ul class="nav">
+            <li><a href="#Inicio">// inicio</a></li>
+            <li><a href="#id-Experiencia">// Experiencia</a></li>
+            <li><a href="#id-Proyectos">// Proyectos</a></li>
+            <li><a href="#id-Acerca">// Acerca de...</a></li>
         </ul>
     </header>
-    <section>
-        <h1>home</h1>
+
+    <!-- Inicio -->
+    <section id="Inicio">
+        <div class="inicio-info">
+            <h1>Sergio Magaña</h1>
+            <h2>Desarrollador fullstack jr.</h2>
+        </div>
+        <div class="inicio-perfil">
+            <img src="./src/public/img/perfil.jpg" alt="Foto de perfil" class="perfil-img">
+            <div id="contenedor-3d" style="width: 600px; height: 400px;"></div>
+        </div>
+
     </section>
-    <section>
-        <h1>work</h1>
+
+    <!-- Experiencia -->
+    <section id="id-Experiencia">
+        <h1>Mi Experiencia</h1>
+        <div class="Experiencia">
+            <div class='Exp-Backend'>
+                <h3>Backend y tecnologias</h3>
+                <p> Desarrollo APIs con <span>Node.js, Express</span>.
+                    Manejo bases de datos relacionales y NoSQL.</p>
+            </div>
+
+            <div class='Exp-frontend'>
+                <h3>Frontend</h3>
+                <p> Desarrollo APIs con <span>Node.js, Express</span>.
+                    Manejo bases de datos relacionales y NoSQL.</p>
+            </div>
+
+            <div class='Exp-Otros'>
+                <h3>Proyectos externos</h3>
+                <p> Desarrollo APIs con <span>Node.js, Express</span>.
+                    Manejo bases de datos relacionales y NoSQL.</p>
+            </div>
+        </div>
     </section>
-    <section>
-        <h1>skills</h1>
+
+    <!-- Proyectos -->
+    <section id="id-Proyectos">
+        <div class="Proyectos">
+            <!-- Galeria -->
+            <div class="galeria-proyectos">
+                <img src="./src/public/img/Proyectos/Kiosko_histor.png" alt="Proyectos" class="galeria-img"
+                    id="galeria-img">
+            </div>
+
+            <!-- Lista -->
+            <div class="lista-proyectos">
+                <h3>Proyectos</h3>
+                <ul>
+                    <!-- sigg -->
+                    <li onclick="Galeria('SIGG-index.png')">
+                        <div>
+                            <h4>SIGG</h4>
+                        </div>
+                        <div>
+                            <h4 class="proyectos-tec">Node.js - MySQL</h4>
+                        </div>
+                    </li>
+                    <!-- Tickets -->
+                    <li onclick="Galeria('Kiosko_index.png')">
+                        <div>
+                            <h4>Kiosko</h4>
+                        </div>
+                        <div>
+                            <h4 class="proyectos-tec">Node.js - Ionic</h4>
+                        </div>
+                    </li>
+                    <!-- Meli -->
+                    <li onclick="Galeria('Meli-index.jpg')">
+                        <div>
+                            <h4>Meli</h4>
+                        </div>
+                        <div>
+                            <h4 class="proyectos-tec">Node.js - React</h4>
+                        </div>
+                    </li>
+                    <!-- Bombas -->
+                    <li onclick="Galeria('Promesa-index.png')">
+                        <div>
+                            <h4>Bombas</h4>
+                        </div>
+                        <div>
+                            <h4 class="proyectos-tec">Node.js - Electron - SQLite </h4>
+                        </div>
+                    </li>
+                    <!-- Novela -->
+                    <li onclick="Galeria('Unity-index.png')">
+                        <div>
+                            <h4>Unity</h4>
+                        </div>
+                        <div>
+                            <h4 class="proyectos-tec">C#</h4>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </section>
-    <section>
-        <h1>contact</h1>
+
+
+    <section id="id-Acerca" class="Acerca">
+        <div id="Biografia" class="biografia">
+            <p>Hola mundo, soy Sergio Magaña, desarrollador fullstack jr, he creado diversos articulos, me gusto que fue
+                en diferentes
+                tecnologias para saber en que me gustaria enfocarme, cree diversas aplicaciones para uso personal y
+                tambien incurcione en el mundo del desarrollo de video juegos, cada proyecto es un desafio y un
+                aprendizaje.</p>
+        </div>
+
+        <div class="Marquecina">
+            <p class="marcar-final" id="CajaMensajes">Hola mundo!
+            </p>
+            <div class="Cursor-Estatico" id="Cursor"></div>
+        </div>
+
+        <div class="Contacto">
+            <div>
+                <p>Contactame: <span>osvaldodev92@gmail.com</span></p>
+            </div>
+            <div>
+                <button>GITHUB</button>
+                <button>LINKEDIN</button>
+                <button>TIKTOK</button>
+            </div>
+
+
+        </div>
     </section>
-    <section>
-        <h1>contact</h1>
-    </section>
-    <section>
-        <h1>contact</h1>
-    </section>
-    <section>
-        <h1>contact</h1>
-    </section>
-    <section>
-        <h1>contact</h1>
-    </section>
-    <section>
-        <h1>contact</h1>
-    </section>
-    <section>
-        <h1>contact</h1>
-    </section>
-    <section>
-        <h1>contact</h1>
-    </section>
-    <section>
-        <h1>contact</h1>
-    </section>
-    <section>
-        <h1>contact</h1>
-    </section>
-    <section>
-        <h1>contact</h1>
-    </section>
-    <section>
-        <h1>contact</h1>
-    </section>
-    <section>
-        <h1>contact</h1>
-    </section>
-    <section>
-        <h1>contact</h1>
-    </section>
-    <section>
-        <h1>contact</h1>
-    </section>
-    <section>
-        <h1>contact</h1>
-    </section>
-    <section>
-        <h1>contact</h1>
-    </section>
-    <section>
-        <h1>contact</h1>
-    </section>
-    <section>
-        <h1>contact</h1>
-    </section>
-    <section>
-        <h1>contact</h1>
-    </section>
-    <section>
-        <h1>contact</h1>
-    </section>
-    <section>
-        <h1>contact</h1>
-    </section>
-    <section>
-        <h1>contact</h1>
-    </section>
-    <section>
-        <h1>contact</h1>
-    </section>
-    <section>
-        <h1>contact</h1>
-    </section>
-    <section>
-        <h1>contact</h1>
-    </section>
+
+    <style>
+        .marcar-final::after {
+            content: "";
+            background-color: yellow;
+        }
+
+        .letra-fade {
+            opacity: 0;
+            transition: opacity 0.3s;
+            display: inline-block;
+        }
+
+        .letra-fade.visible {
+            opacity: 1;
+        }
+
+
+        .Cursor-Estatico {
+            width: 10px;
+            height: 60%;
+            background-color: var(--color-sec);
+        }
+
+        .Cursor {
+            width: 10px;
+            height: 60%;
+            background-color: var(--color-sec);
+            animation: pulsar 1s infinite;
+        }
+
+        @keyframes pulsar {
+            0% {
+                transform: scale(0);
+            }
+
+            50% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(0);
+            }
+        }
+
+        .Contacto {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: transparent;
+            color: var(--color-sec);
+            border: 2px solid var(--color-sec);
+            width: 150px;
+            height: 40px;
+            border-radius: 24px;
+            margin: 10px;
+            cursor: pointer;
+
+        }
+    </style>
+
 </body>
+
 </html>
