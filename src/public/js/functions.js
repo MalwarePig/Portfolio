@@ -18,10 +18,18 @@ function Mensajes() {
     function escribirFrase(fraseActual) {
         caja.textContent = '';
         let letra = 0;
+
         const escribirLetra = setInterval(() => {
             cursor.classList.remove('Cursor');//quitar el pulso del cursor
-            caja.textContent += mensajes[fraseActual][letra];
-            /* caja.className = 'letra-fade'; */
+            const span = document.createElement('span');
+            span.className = 'letra-fade';
+
+            span.textContent = mensajes[fraseActual][letra] === ' ' ? ' ' : mensajes[fraseActual][letra];
+            caja.appendChild(span);
+
+            setTimeout(() => {
+                span.classList.add('visible');
+            }, 10);
 
             letra++;
             /*  */
@@ -31,7 +39,7 @@ function Mensajes() {
             if (letra >= mensajes[fraseActual].length) {
                 clearInterval(escribirLetra);
                 cursor.classList.add('Cursor');
-                caja.classList.add('visible');
+
                 // Espera 1 segundo antes de mostrar la siguiente frase
                 setTimeout(() => {
                     frase++;
@@ -49,3 +57,23 @@ function Mensajes() {
 
     escribirFrase(frase);
 }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('header');
+    const inicio = document.getElementById('Inicio');
+
+    const observer = new IntersectionObserver(
+        ([entry]) => {
+            if (entry.isIntersecting) {
+                header.classList.add('oculto'); // Oculta el header cuando #Inicio está visible
+            } else {
+                header.classList.remove('oculto'); // Muestra el header cuando #Inicio NO está visible
+            }
+        },
+        { threshold: 0.5 } // Puedes ajustar el umbral según lo que necesites
+    );
+
+    if (inicio) observer.observe(inicio);
+});
+
