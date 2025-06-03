@@ -52,13 +52,13 @@
     <!-- Experiencia -->
     <section id="id-Experiencia">
         <h1>Mi experiencia</h1>
-        <div class="Experiencia">
+        <div class="Experiencia ">
             <div class='Exp-Backend'>
                 <h3>Backend</h3>
                 <p>
                     Experiencia en desarrollo de APIs utilizando <span>Node.js</span> y <span>Express</span>.<br><br>
                     Creación y consumo de APIs RESTful.<br><br>
-                    Bases de datos relacionales como <span>(SQL Server</span>, <span>MySQL</span> y
+                    BBDD relacionales como <span>(SQL Server</span>, <span>MySQL</span> y
                     <span>PostgreSQL)</span>, y NoSQL <span>(Firebase)</span>.
                 </p>
             </div>
@@ -68,7 +68,7 @@
                 <p>
                     Conocimientos sólidos en tecnologías frontend como <span>HTML</span>, <span>CSS</span> y
                     <span>JavaScript</span>.<br><br>
-                    Experiencia con frameworks como <span>Ionic</span> y<span>Electron</span>, y con librerías
+                    Experiencia con frameworks como <span>Ionic</span> y <span>Electron</span>. <br>Librerías
                     como <span>React</span>, <span>Bootstrap</span> y <span>Sass</span>.
                 </p>
             </div>
@@ -76,9 +76,10 @@
             <div class='Exp-Otros'>
                 <h3>Extras</h3>
                 <p> 
-                    Participación en proyectos de código abierto y colaborativos.<br><br>
-                    Contribuciones a la comunidad a través de plataformas como <span>GitHub</span>.<br><br>
-                    y <span>Electron</span>.
+                    Capacitacion por CEDIS UANL en Java.<br><br>
+                    Prototipo de ERP en C# antes de ser migrado a JS.<br><br>
+                    Novela grafica usando Unity y C# para android.<br><br>
+
                 </p>
             </div>
         </div>
@@ -89,8 +90,9 @@
         <div class="Proyectos">
             <!-- Galeria -->
             <div class="galeria-proyectos">
-                <img src="./src/public/img/Proyectos/Kiosko_histor.png" alt="Proyectos" class="galeria-img"
-                    id="galeria-img">
+                <button class="galeria-btn galeria-btn-izq" onclick="anteriorImagen()">&#8592;</button>
+                <img id="galeria-img" class="galeria-img" src="img1.jpg" alt="Proyecto">
+                <button class="galeria-btn galeria-btn-der" onclick="siguienteImagen()">&#8594;</button>
             </div>
 
             <!-- Lista -->
@@ -107,27 +109,27 @@
                         </div>
                     </li>
                     <!-- Tickets -->
-                    <li onclick="Galeria('Kiosko_index.png')">
+                    <li onclick="Galeria('Kisko-index.png')">
                         <div>
                             <h4>Kiosko</h4>
                         </div>
                         <div>
-                            <h4 class="proyectos-tec">Node.js - Ionic</h4>
+                            <h4 class="proyectos-tec">Node.js - Ionic - MySQL</h4>
                         </div>
                     </li>
                     <!-- Meli -->
-                    <li onclick="Galeria('Meli-index.jpg')">
+                    <li onclick="Galeria('Meli-index.png')">
                         <div>
                             <h4>Meli</h4>
                         </div>
                         <div>
-                            <h4 class="proyectos-tec">Node.js - React</h4>
+                            <h4 class="proyectos-tec">Node.js - React - Firebase</h4>
                         </div>
                     </li>
-                    <!-- Bombas -->
+                    <!-- Promesa -->
                     <li onclick="Galeria('Promesa-index.png')">
                         <div>
-                            <h4>Bombas</h4>
+                            <h4>Promesa</h4>
                         </div>
                         <div>
                             <h4 class="proyectos-tec">Node.js - Electron - SQLite </h4>
