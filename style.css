@@ -90,6 +90,22 @@ h3 {
   gap: 5px;
 }
 
+#terminal {
+   animation: latido 1.5s infinite;
+}
+
+@keyframes latido {
+  0% {
+    opacity: 0;
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
+
 section {
   background-color: var(--bg-prim);
   padding-top: 0;
