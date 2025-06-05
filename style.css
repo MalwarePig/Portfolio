@@ -85,6 +85,9 @@ h3 {
   top: 0;
   z-index: 1001;
   margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 section {
