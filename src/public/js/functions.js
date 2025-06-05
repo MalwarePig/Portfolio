@@ -1,8 +1,30 @@
+/* Cargar imagen de proyecto */
+var proyectoActual = null
 function Galeria(param) {
     const galeria = document.getElementById("galeria-img");
-    galeria.src = './src/public/img/Proyectos/' + param;
+    galeria.src = './src/public/img/Proyectos/' + param + '-0.png';
+    proyectoActual = param;
 }
 
+/* Botones para retroceder o adelantar imagen */
+var contador = 1;
+function cambiarImagen() {
+    const galeria = document.getElementById("galeria-img"); 
+    const imagenes = [
+        proyectoActual+'-0.png',
+        proyectoActual+'-1.png',
+        proyectoActual+'-2.png',
+    ];
+    galeria.src = './src/public/img/Proyectos/' + imagenes[contador];
+    contador++;
+    if (contador === imagenes.length) {
+        contador = 0;
+    }
+    console.log(contador,imagenes.length)
+}
+
+
+/* Carga los mensajes en marquecina */
 function Mensajes() {
     const caja = document.getElementById('CajaMensajes');
     const cursor = document.getElementById('Cursor');
@@ -58,7 +80,7 @@ function Mensajes() {
     escribirFrase(frase);
 }
 
-
+/* detecta el section inicio para esconder el header */
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('header');
     const inicio = document.getElementById('Inicio');
@@ -73,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         { threshold: 0.5 } // Puedes ajustar el umbral según lo que necesites
     );
-
     if (inicio) observer.observe(inicio);
 });
+
 

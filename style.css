@@ -76,6 +76,17 @@ h3 {
   text-transform: uppercase;
 }
 
+.Building{
+  color:#00ffd0;
+  position: fixed;
+  margin-left: 50px;
+  /* margin-top: 10px; */
+  left: 0;
+  top: 0;
+  z-index: 1001;
+  margin-top: 5px;
+}
+
 section {
   background-color: var(--bg-prim);
   padding-top: 0;
