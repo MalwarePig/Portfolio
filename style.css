@@ -228,7 +228,7 @@ hr {
 }
 
 /* Proyectos y Galeria */
-#id-Proyectos  {
+#id-Proyectos {
   padding-top: 20%;
 }
 .Proyectos {
@@ -289,7 +289,7 @@ hr {
   transform: translateY(-50%) scale(1.1);
 }
 
-.lista-proyectos {  
+.lista-proyectos {
   display: flex;
   flex-direction: column;
   width: 80%;
@@ -300,7 +300,7 @@ hr {
   width: 100%;
   padding: 0;
   margin: 5px 0px;
- /*  padding: 0 auto; */
+  /*  padding: 0 auto; */
 }
 
 .lista-proyectos li {
@@ -336,8 +336,8 @@ hr {
   height: 100%;
   min-height: 100%;
 } */
- .lista-proyectos li > div h4 {
-  text-align: left; 
+.lista-proyectos li > div h4 {
+  text-align: left;
   font-size: 0.8rem;
 }
 
@@ -356,7 +356,7 @@ hr {
 .lista-proyectos li > div:last-child {
   flex: 2.2;
 }
- 
+
 /* Acerca de */
 .Acerca {
   display: flex;
@@ -375,7 +375,7 @@ hr {
 }
 
 .biografia p {
-  font-family: "Roboto Mono",Poppins, "Courier New", Courier, monospace;
+  font-family: "Roboto Mono", Poppins, "Courier New", Courier, monospace;
   font-size: 1rem;
   color: var(--color-sec);
   line-height: 2rem;
@@ -386,7 +386,7 @@ hr {
   border-top: 2px solid var(--color-ter);
   border-bottom: 2px solid var(--color-ter);
   width: 100%;
-  height: 200px;
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -396,9 +396,9 @@ hr {
 .Marquecina p {
   font-family: "Bebas Neue", "Courier New", Courier, monospace;
   margin-right: 10px;
-  font-size: 3rem; 
+  font-size: 3rem;
   letter-spacing: -0.2rem;
-  font-weight: bold; 
+  font-weight: bold;
   color: var(--color-sec);
 }
 
@@ -448,7 +448,7 @@ hr {
   margin-top: 20px;
 }
 
-.enlaces{
+.enlaces {
   margin-top: 10px;
   display: flex;
   justify-content: space-around;
@@ -477,8 +477,6 @@ hr {
   color: #030303;
   border-color: var(--color-ter);
 }
-
-
 
 /* Efectos */
 
@@ -600,4 +598,26 @@ hr {
   100% {
     background-position: 100% 50%;
   }
+}
+
+.home {
+  width: 50px;
+  padding: 5px;
+  height: 50px;
+  border: var(--color-ter) 1px solid;
+  border-radius: 45px;
+  position: fixed;
+  background-color: transparent;
+  border-color: #a1a0ab4f;
+  top: 92%;
+  right: 32px;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.oculto {
+  opacity: 0;
+  pointer-events: none;
 }

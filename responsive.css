@@ -305,7 +305,7 @@
     height: 700px;
     display: flex;
     flex-direction: column;
-     margin-top: 0;
+    margin-top: 0;
   }
 
   .lista-proyectos ul {
@@ -375,9 +375,9 @@
   }
 
   /* Acerca de */
-#id-Acerca{
-   padding-top: 0;
-}
+  #id-Acerca {
+    padding-top: 0;
+  }
   .Acerca {
     display: flex;
     align-items: center;
@@ -394,7 +394,7 @@
   }
 
   .biografia p {
-    font-family: "Roboto Mono",Poppins, "Courier New", Courier, monospace;
+    font-family: "Roboto Mono", Poppins, "Courier New", Courier, monospace;
     font-size: 1.2rem;
     color: var(--color-sec);
     line-height: 2rem;
@@ -470,16 +470,7 @@
     margin-top: 20px;
   }
 
-  button {
-    background-color: transparent;
-    color: var(--color-sec);
-    border: 2px solid var(--color-sec);
-    width: 150px;
-    height: 40px;
-    border-radius: 24px;
-    margin: 10px;
-    cursor: pointer;
-  }
+   
 
   /* Efectos */
 
@@ -602,4 +593,6 @@
       background-position: 100% 50%;
     }
   }
+
+ 
 }

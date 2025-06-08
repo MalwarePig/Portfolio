@@ -84,13 +84,16 @@ function Mensajes() {
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('header');
     const inicio = document.getElementById('Inicio');
+    const buttonHome = document.getElementById('home')
 
     const observer = new IntersectionObserver(
         ([entry]) => {
             if (entry.isIntersecting) {
                 header.classList.add('oculto'); // Oculta el header cuando #Inicio está visible
+                buttonHome.classList.add('oculto'); // Oculta el header cuando #Inicio está visible
             } else {
                 header.classList.remove('oculto'); // Muestra el header cuando #Inicio NO está visible
+                buttonHome.classList.remove('oculto'); // Oculta el header cuando #Inicio está visible
             }
         },
         { threshold: 0.5 } // Puedes ajustar el umbral según lo que necesites
