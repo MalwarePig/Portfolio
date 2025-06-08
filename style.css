@@ -485,40 +485,54 @@ hr {
 .rgb-bg {
   position: relative;
   z-index: 1;
-  background: var(--bg-prim);
+  background: var(--bg-prim); /* Fondo interior del contenedor */
   border-radius: 24px;
   overflow: hidden;
 }
 
+/* Borde animado multicolor con difuminado suave */
 .rgb-bg::before {
   content: "";
   position: absolute;
-  inset: -4px;
-  /* Tamaño del "borde" */
+  inset: -4px; /* Tamaño del "borde" hacia afuera */
   z-index: -1;
   border-radius: 28px;
   background: linear-gradient(
-    270deg,
-    #ff005a,
-    #00aaff,
-    #853bce,
-    #ff005a,
-    #00aaff,
-    #853bce,
-    #ff005a
+    /*   270deg,  
+  #990000,
+  #994c00,
+  #999900,
+  #007f00,
+  #000099,
+  #4b0082,
+  #800080,
+  #990000 */
+      45deg,
+    #6a00ff,
+    /* Amatista digital */ #00aaff,
+    #c800b0,
+    /* Fucsia púrpura */ #002244,
+    /* Azul casi negro */ #820098,
+    /* Violeta profundo */ #00aaff,
+    #6a00ff
   );
-  background-size: 600% 600%;
-  filter: blur(4px);
-  animation: rgb-border-bg 20s linear infinite;
+  background-size: 300% 300%;
+  filter: blur(6px); /* Difuminado más suave */
+  animation: rgb-border-bg 15s ease-in-out infinite;
 }
 
+/* Animación del gradiente en bucle suave */
 @keyframes rgb-border-bg {
   0% {
     background-position: 0% 50%;
   }
 
-  100% {
+  50% {
     background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
   }
 }
 
@@ -552,6 +566,10 @@ hr {
 }
 
 /* Bordes rgb */
+:root {
+  --bg-prim: #222;
+}
+
 .borde-rgb {
   position: relative;
   z-index: 1;
@@ -566,14 +584,13 @@ hr {
   inset: -4px;
   z-index: -1;
   background: linear-gradient(
-    270deg,
-    #ff005a,
+    #6a00ff,
     #00aaff,
-    #853bce,
-    #ff005a,
+    #c800b0,
+    #002244,
+    #820098,
     #00aaff,
-    #853bce,
-    #ff005a
+    #6a00ff
   );
   background-size: 400% 400%;
   animation: borde-rgb-anim 24s linear infinite;
@@ -588,7 +605,6 @@ hr {
   inset: 0;
   z-index: -1;
   background: var(--bg-prim);
-  /* Cambia este color por el fondo real de tu sitio */
   pointer-events: none;
 }
 
@@ -601,6 +617,7 @@ hr {
     background-position: 100% 50%;
   }
 }
+
 
 .home {
   width: 50px;
