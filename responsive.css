@@ -1,0 +1,601 @@
+@media (min-width: 1024px) {
+  header {
+    background-color: #0505079d;
+    /* color negro con 80% opacidad */
+    backdrop-filter: blur(8px);
+    /* Opcional: desenfoque para efecto glass */
+    color: var(--color-ter);
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    transition: opacity 0.5s;
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 1000;
+  }
+
+  .Building {
+    color: #ff2600;
+    position: fixed;
+    margin-left: 50px;
+    /* margin-top: 10px; */
+    left: 0;
+    top: 0;
+    z-index: 1001;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  #terminal {
+    animation: latido 1.5s infinite;
+  }
+
+  @keyframes latido {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  h1 {
+    font-family: Poppins, "Courier New", Courier, monospace;
+    font-size: 5rem;
+    margin: 0px;
+    font-weight: bold;
+  }
+
+  section {
+    background-color: var(--bg-prim);
+    padding-top: 0;
+    /* Sin espacio arriba por defecto */
+    text-align: center;
+    min-height: 100vh;
+    margin-top: 0;
+  }
+
+  section:not(.inicio) {
+    padding-top: 10%;
+    /* Solo los que NO son .inicio */
+  }
+
+  /* Inicio */
+  /* Movil */
+
+  @media (min-width: 1024px) {
+  }
+  .inicio {
+    padding-top: 0;
+    display: flex;
+    flex-direction: row; /* En escritorio */
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .inicio-info {
+    margin-top: 0px;
+    font-size: 2rem;
+    letter-spacing: -0.2rem;
+    font-weight: bold;
+    display: inline-block;
+  }
+
+  .inicio-info h1 {
+    margin: 0 !important;
+    font-size: clamp(2rem, 5rem, 7rem);
+  }
+
+  .inicio-info h2 {
+    margin: 0 !important;
+    font-size: clamp(2rem, 2rem, 7rem);
+  }
+
+  .Nombre {
+    padding: 5px 20px;
+  }
+
+  .perfil-img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    object-position: top;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));
+    /*  border-radius: 50%; */
+    /*   border: var(--border-gray) 1px solid;  */
+    mask-image: linear-gradient(black 80%, transparent);
+  }
+
+  .menu {
+    list-style: none;
+    text-align: left;
+  }
+
+  .menu hr {
+    padding: 0;
+    margin: 20px auto;
+    display: block;
+  }
+
+  .menu li {
+    margin: 20px;
+    padding: 0;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+  }
+
+  .menu li > a {
+    width: 100%;
+    /*  height: auto; */
+    text-decoration: none;
+    padding: 10px;
+    border: none;
+    font-family: "Poppins", "Montserrat", "Bebas Neue", "Courier New", Courier,
+      monospace;
+    font-size: 10rem;
+    /* Tamaño grande */
+    font-weight: 900;
+    /* Muy gruesa */
+    line-height: 900px;
+    letter-spacing: 0.1rem;
+    line-height: 9rem;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: color 0.3s, text-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .menu li > a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(
+      90deg,
+      #ff005a,
+      #00ffd0,
+      #00aaff,
+      #853bce,
+      #ff005a
+    );
+    border-radius: 3px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 0;
+  }
+
+  .menu li > a:hover::after {
+    transform: scaleX(1);
+  }
+
+  hr {
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-ter);
+    border: none;
+    margin: 20px auto;
+  }
+
+  /* Experiencias */
+  #id-Experiencia h1 {
+    padding-top: 0;
+  }
+
+  .Experiencia {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 80px;
+  }
+
+  .Exp-Backend,
+  .Exp-frontend,
+  .Exp-Otros {
+    border: var(--border-gray) 1px solid;
+    width: 420px;
+    /* ancho fijo */
+    height: 420px;
+    /* alto igual al ancho */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    /*  justify-content: space-evenly;*/
+    align-items: center;
+    gap: 50px;
+  }
+
+  .Exp-Backend h3,
+  .Exp-frontend h3,
+  .Exp-Otros h3 {
+    font-family: "Roboto Mono", Poppins, "Courier New", Courier, monospace;
+    margin-top: 50px;
+    font-size: 2rem;
+  }
+
+  .Exp-Backend p,
+  .Exp-frontend p,
+  .Exp-Otros p {
+    font-family: "Roboto Mono", Poppins, "Courier New", Courier, monospace;
+    font-size: 1.2rem;
+    color: var(--color-sec);
+    line-height: 1.5rem;
+    font-weight: bold;
+    margin: 0 30px;
+    padding: 0 !important;
+    text-align: left;
+  }
+
+  /* Proyectos y Galeria */
+  #id-Proyectos {
+    padding-top: 10%;
+  }
+  .Proyectos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .galeria-proyectos {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    height: 700px;
+    background-color: #f3f3f3;
+    border-radius: 24px;
+    overflow: hidden;
+  }
+
+  .galeria-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 0;
+  }
+
+  .galeria-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(20, 20, 30, 0.7);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 2;
+    transition: background 0.2s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .galeria-btn-izq {
+    left: 16px;
+  }
+
+  .galeria-btn-der {
+    right: 16px;
+  }
+
+  .galeria-btn:hover {
+    background: #853bce;
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  .lista-proyectos {
+    width: 700px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+     margin-top: 0;
+  }
+
+  .lista-proyectos ul {
+    width: 100%;
+    padding: 0;
+    margin: 20px 0px;
+  }
+
+  .lista-proyectos li {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    min-height: 40px;
+    box-sizing: border-box;
+    font-size: 2rem;
+    border-top: 2px solid var(--color-ter);
+    /* Cambia el color y grosor a tu gusto */
+  }
+
+  .lista-proyectos li:hover {
+    cursor: pointer;
+    animation: Listados 1s infinite;
+  }
+
+  .lista-proyectos h4 {
+    font-size: 2rem;
+  }
+
+  @keyframes Listados {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.1);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  /* .lista-proyectos li > div {
+  flex: 1;
+} */
+  .lista-proyectos li > div h4 {
+    text-align: left;
+    font-size: 1.8rem;
+  }
+
+  .lista-proyectos li > div:first-child {
+    flex: 1;
+    display: flex;
+    align-items: end; /* Centra el contenido verticalmente */
+    justify-content: start; /* Centra el contenido horizontalmente */
+  }
+
+  .lista-proyectos li > div:last-child {
+    flex: 2;
+    display: flex;
+    align-items: flex-start; /* Centra el contenido verticalmente */
+    justify-content: start; /* Centra el contenido horizontalmente */
+  }
+
+  .proyectos-tec {
+    font-size: 1.5rem;
+  }
+
+  /* Acerca de */
+
+  .Acerca {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 0px;
+    min-height: 75vh;
+  }
+
+  .biografia {
+    padding-top: 0;
+    margin-top: 0;
+    width: 70%;
+  }
+
+  .biografia p {
+    font-family: Poppins, "Courier New", Courier, monospace;
+    font-size: 1.2rem;
+    color: var(--color-sec);
+    line-height: 2rem;
+    text-align: justify;
+  }
+
+  .Marquecina {
+    border-top: 2px solid var(--color-ter);
+    border-bottom: 2px solid var(--color-ter);
+    width: 90%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .Marquecina p {
+    font-family: "Bebas Neue", "Courier New", Courier, monospace;
+    margin-right: 20px;
+    font-size: 213px;
+    line-height: 213px;
+    letter-spacing: -0.9rem;
+    font-weight: bold;
+    display: inline-block;
+    color: var(--color-sec);
+  }
+
+  .letra-fade {
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: inline-block;
+    white-space: pre;
+  }
+
+  .letra-fade.visible {
+    opacity: 1;
+  }
+
+  .Cursor-Estatico {
+    width: 10px;
+    height: 60%;
+    background-color: var(--color-sec);
+  }
+
+  .Cursor {
+    width: 10px;
+    height: 60%;
+    background-color: var(--color-sec);
+    animation: pulsar 1s infinite;
+  }
+
+  @keyframes pulsar {
+    0% {
+      transform: scale(0);
+    }
+
+    50% {
+      transform: scale(1);
+    }
+
+    100% {
+      transform: scale(0);
+    }
+  }
+
+  .Contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 20px;
+  }
+
+  button {
+    background-color: transparent;
+    color: var(--color-sec);
+    border: 2px solid var(--color-sec);
+    width: 150px;
+    height: 40px;
+    border-radius: 24px;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  /* Efectos */
+
+  .rgb-bg {
+    position: relative;
+    z-index: 1;
+    background: var(--bg-prim);
+    border-radius: 24px;
+    overflow: hidden;
+  }
+
+  .rgb-bg::before {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    /* Tamaño del "borde" */
+    z-index: -1;
+    border-radius: 28px;
+    background: linear-gradient(
+      270deg,
+      #ff005a,
+      #00aaff,
+      #853bce,
+      #ff005a,
+      #00aaff,
+      #853bce,
+      #ff005a
+    );
+    background-size: 600% 600%;
+    filter: blur(4px);
+    animation: rgb-border-bg 20s linear infinite;
+  }
+
+  @keyframes rgb-border-bg {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .rgb-text {
+    background: linear-gradient(
+      270deg,
+      #ff005a,
+      #00aaff,
+      #853bce,
+      #ff005a,
+      #00aaff,
+      #853bce,
+      #ff005a
+    );
+    background-size: 600% 600%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    animation: rgb-text-bg 8s linear infinite;
+  }
+
+  @keyframes rgb-text-bg {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+  /* Bordes rgb */
+  .borde-rgb {
+    position: relative;
+    z-index: 1;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    overflow: visible;
+  }
+
+  .borde-rgb::before {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    z-index: -1;
+    background: linear-gradient(
+      270deg,
+      #ff005a,
+      #00aaff,
+      #853bce,
+      #ff005a,
+      #00aaff,
+      #853bce,
+      #ff005a
+    );
+    background-size: 400% 400%;
+    animation: borde-rgb-anim 24s linear infinite;
+    filter: blur(1.5px);
+    pointer-events: none;
+  }
+
+  .borde-rgb::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: #fff;
+    /* Cambia este color por el fondo real de tu sitio */
+    pointer-events: none;
+  }
+
+  @keyframes borde-rgb-anim {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+}

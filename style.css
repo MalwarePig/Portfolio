@@ -21,22 +21,7 @@ body {
 }
 
 header {
-  background-color: #0505079d;
-  /* color negro con 80% opacidad */
-  backdrop-filter: blur(8px);
-  /* Opcional: desenfoque para efecto glass */
-  color: var(--color-ter);
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  transition: opacity 0.5s;
-  opacity: 1;
-  pointer-events: auto;
-  z-index: 1000;
+  display: none;
 }
 
 header.oculto {
@@ -64,7 +49,7 @@ li a {
 
 h1 {
   font-family: Poppins, "Courier New", Courier, monospace;
-  font-size: 5rem;
+  font-size: 2rem;
   margin: 0px;
   font-weight: bold;
 }
@@ -76,22 +61,22 @@ h3 {
   text-transform: uppercase;
 }
 
-.Building{
-  color:#00ffd0;
+.Building {
+  color: #00ffd0;
   position: fixed;
   margin-left: 50px;
   /* margin-top: 10px; */
   left: 0;
   top: 0;
   z-index: 1001;
-  margin-top: 5px;
+  margin-top: 35px;
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
 #terminal {
-   animation: latido 1.5s infinite;
+  animation: latido 1.5s infinite;
 }
 
 @keyframes latido {
@@ -99,10 +84,10 @@ h3 {
     opacity: 0;
   }
   50% {
-      opacity: 1;
+    opacity: 1;
   }
   100% {
-      opacity: 0;
+    opacity: 0;
   }
 }
 
@@ -112,37 +97,34 @@ section {
   /* Sin espacio arriba por defecto */
   text-align: center;
   min-height: 100vh;
-}
-
-section:not(.inicio) {
-  padding-top: 10%;
-  /* Solo los que NO son .inicio */
+  margin-top: 20%;
 }
 
 /* Inicio */
-
+/* Movil */
 .inicio {
   padding-top: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  gap: 40px;
 }
 
 .inicio-info {
   margin-top: 0px;
-  font-size: 2rem;
-  letter-spacing: -0.2rem;
+  letter-spacing: -0.1rem;
   font-weight: bold;
   display: inline-block;
 }
 
-.inicio-info h1,
-h2 {
+.inicio-info h1 {
   margin: 0 !important;
+  font-size: 2.2rem;
 }
 
-.Nombre {
-  padding: 5px 20px;
+.inicio-info h2 {
+  margin: 0 !important;
+  font-size: 2rem;
 }
 
 .perfil-img {
@@ -157,51 +139,35 @@ h2 {
 }
 
 .menu {
+  padding: 0;
+  margin: 0;
   list-style: none;
   text-align: left;
 }
-
-.menu li>a {
-  width: 100%;
-  text-decoration: none;
-  padding: 10px;
-  font-family: "Poppins", "Montserrat", "Bebas Neue", "Courier New", Courier,
-    monospace;
-  font-size: 10rem;
-  /* Tamaño grande */
-  font-weight: 900;
-  /* Muy gruesa */
-  line-height: 900px;
-  letter-spacing: 0.1rem;
-  line-height: 9rem;
-  text-transform: uppercase;
-  display: inline-block;
-  transition: color 0.3s, text-shadow 0.3s;
-  position: relative;
-  overflow: hidden;
+.menu hr {
+  padding: 0;
+  margin: 0;
+  display: none;
 }
 
-.menu li>a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 5px;
+.menu li {
+  margin: 10px 0;
+  padding: 0;
   width: 100%;
-  height: 6px;
-  background: linear-gradient(90deg,
-      #ff005a,
-      #00ffd0,
-      #00aaff,
-      #853bce,
-      #ff005a);
-  border-radius: 3px;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 0;
+  border: 2px solid var(--color-sec);
+  cursor: pointer;
+  border-radius: 24px;
+  text-align: center;
+}
+.menu li > a {
+  background-color: transparent;
+  color: var(--color-sec);
+  padding: 10px 10px;
+  /*   margin: 10px 20px; */
+  display: block; /* Hace que el enlace ocupe todo el ancho del li */
 }
 
-.menu li>a:hover::after {
+.menu li > a:hover::after {
   transform: scaleX(1);
 }
 
@@ -213,70 +179,61 @@ hr {
   margin: 20px auto;
 }
 
-/* Experencias */
+/* Experiencias */
+#id-Experiencia h1 {
+  padding-top: 20%;
+}
 
 .Experiencia {
   display: flex;
   justify-content: center;
-  margin-top: 80px;
+  flex-direction: column;
+  margin-top: 10px;
 }
 
 .Exp-Backend,
 .Exp-frontend,
 .Exp-Otros {
   border: var(--border-gray) 1px solid;
-  width: 420px;
+  width: 95%;
   /* ancho fijo */
-  height: 420px;
+  height: auto;
   /* alto igual al ancho */
-  margin: 0;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   /*  justify-content: space-evenly;*/
   align-items: center;
-  gap: 50px;
 }
 
 .Exp-Backend h3,
 .Exp-frontend h3,
 .Exp-Otros h3 {
   font-family: "Roboto Mono", Poppins, "Courier New", Courier, monospace;
-  margin-top: 50px;
+  margin-top: 10px;
+  font-size: 1.2rem;
 }
 
 .Exp-Backend p,
 .Exp-frontend p,
 .Exp-Otros p {
   font-family: "Roboto Mono", Poppins, "Courier New", Courier, monospace;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: var(--color-sec);
   line-height: 1.5rem;
   font-weight: bold;
-  margin: 0 30px;
+  margin: 5px 10px;
   padding: 0 !important;
   text-align: left;
 }
-
-
-.Exp-Backend p,
-.Exp-frontend p,
-.Exp-Otros p {
-  font-family: "Roboto Mono", Poppins, "Courier New", Courier, monospace;
-  font-size: 1.2rem;
-  color: var(--color-sec);
-  line-height: 1.5rem;
-  font-weight: bold;
-  margin: 0 30px;
-  padding: 0 !important;
-  text-align: left;
-}
-
-
-
 
 /* Proyectos y Galeria */
+#id-Proyectos  {
+  padding-top: 20%;
+}
 .Proyectos {
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
@@ -286,8 +243,8 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 700px;
-  height: 700px;
+  width: 300px;
+  height: 300px;
   background-color: #f3f3f3;
   border-radius: 24px;
   overflow: hidden;
@@ -332,29 +289,27 @@ hr {
   transform: translateY(-50%) scale(1.1);
 }
 
-.lista-proyectos {
-  width: 700px;
-  height: 700px;
+.lista-proyectos {  
   display: flex;
   flex-direction: column;
+  width: 80%;
+  margin-top: 10%;
 }
 
 .lista-proyectos ul {
   width: 100%;
   padding: 0;
-  margin: 20px 0px;
+  margin: 5px 0px;
+ /*  padding: 0 auto; */
 }
 
 .lista-proyectos li {
   display: flex;
-  justify-content: space-evenly;
   width: 100%;
   min-height: 40px;
   box-sizing: border-box;
-  font-size: 2rem;
   border-top: 2px solid var(--color-ter);
   /* Cambia el color y grosor a tu gusto */
-
 }
 
 .lista-proyectos li:hover {
@@ -378,24 +333,30 @@ hr {
 
 /* .lista-proyectos li > div {
   flex: 1;
+  height: 100%;
+  min-height: 100%;
 } */
-
-.lista-proyectos li>div:first-child {
-  flex: 1;
-  text-align: left;
-  align-items: center;
+ .lista-proyectos li > div h4 {
+  text-align: left; 
+  font-size: 0.8rem;
 }
 
-.lista-proyectos li>div:last-child {
-  flex: 2;
-  text-align: right;
-  margin-top: 15px;
+.lista-proyectos li > div:first-child,
+.lista-proyectos li > div:last-child {
+  display: flex;
+  align-items: flex-end; /* Valor correcto */
+  justify-content: flex-start;
+  height: 100%;
 }
 
-.proyectos-tec {
-  font-size: 1.5rem;
+.lista-proyectos li > div:first-child {
+  flex: 0.8;
 }
 
+.lista-proyectos li > div:last-child {
+  flex: 2.2;
+}
+ 
 /* Acerca de */
 
 .Acerca {
@@ -517,14 +478,16 @@ button {
   /* Tamaño del "borde" */
   z-index: -1;
   border-radius: 28px;
-  background: linear-gradient(270deg,
-      #ff005a,
-      #00aaff,
-      #853bce,
-      #ff005a,
-      #00aaff,
-      #853bce,
-      #ff005a);
+  background: linear-gradient(
+    270deg,
+    #ff005a,
+    #00aaff,
+    #853bce,
+    #ff005a,
+    #00aaff,
+    #853bce,
+    #ff005a
+  );
   background-size: 600% 600%;
   filter: blur(4px);
   animation: rgb-border-bg 20s linear infinite;
@@ -541,14 +504,16 @@ button {
 }
 
 .rgb-text {
-  background: linear-gradient(270deg,
-      #ff005a,
-      #00aaff,
-      #853bce,
-      #ff005a,
-      #00aaff,
-      #853bce,
-      #ff005a);
+  background: linear-gradient(
+    270deg,
+    #ff005a,
+    #00aaff,
+    #853bce,
+    #ff005a,
+    #00aaff,
+    #853bce,
+    #ff005a
+  );
   background-size: 600% 600%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -567,7 +532,6 @@ button {
   }
 }
 
-
 /* Bordes rgb */
 .borde-rgb {
   position: relative;
@@ -582,14 +546,16 @@ button {
   position: absolute;
   inset: -4px;
   z-index: -1;
-  background: linear-gradient(270deg,
-      #ff005a,
-      #00aaff,
-      #853bce,
-      #ff005a,
-      #00aaff,
-      #853bce,
-      #ff005a);
+  background: linear-gradient(
+    270deg,
+    #ff005a,
+    #00aaff,
+    #853bce,
+    #ff005a,
+    #00aaff,
+    #853bce,
+    #ff005a
+  );
   background-size: 400% 400%;
   animation: borde-rgb-anim 24s linear infinite;
   filter: blur(1.5px);
