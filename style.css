@@ -128,8 +128,8 @@ section {
 }
 
 .perfil-img {
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 350px;
   object-fit: cover;
   object-position: top;
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));
