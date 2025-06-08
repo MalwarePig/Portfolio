@@ -101,4 +101,4 @@ document.addEventListener('DOMContentLoaded', () => {
     if (inicio) observer.observe(inicio);
 });
 
-
+alert('Estoy casado, sólo denme trabajo!')
