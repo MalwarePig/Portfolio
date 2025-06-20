@@ -24,10 +24,6 @@ header {
   display: none;
 }
 
-header.oculto {
-  opacity: 0;
-  pointer-events: none;
-}
 
 .nav {
   display: flex;
