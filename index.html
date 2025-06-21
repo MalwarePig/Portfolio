@@ -11,20 +11,21 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap&display=swap"
         rel="stylesheet">
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
 
 
     <title>Sergio Magaña - Portafolio</title>
 </head>
 <!--  -->
 
-<body onload="Mensajes()"> 
+<body onload="Mensajes()">
     <header>
         <ul class="nav rgb-text">
             <li><a href="#Inicio">&lt;-- Inicio</a></li>
             <li><a href="#id-Experiencia"> Experiencia</a></li>
-            <li><a href="#id-Proyectos"> Proyectos</a></li>
+            <li><a href="#id-ProyectosPrueba"> Proyectos</a></li>
             <li><a href="#id-Acerca"> Acerca de... --&gt</a></li>
+            <li><a href="#id-Acerca"> Pruebas</a></li>
         </ul>
     </header>
 
@@ -53,6 +54,7 @@
                 <li><a href="#id-Proyectos" class="rgb-text">Proyectos</a></li>
                 <hr>
                 <li><a href="#id-Acerca" class="rgb-text">Acerca de...</a></li>
+                <li><a href="#id-ProyectosPrueba"> Proyectos</a></li>
             </ul>
         </div>
 
@@ -84,7 +86,7 @@
 
             <div class='Exp-Otros'>
                 <h3>Extras</h3>
-                <p> 
+                <p>
                     Capacitacion por CEDIS UANL en Java.<br><br>
                     Prototipo de ERP en C# antes de ser migrado a JS.<br><br>
                     Novela grafica usando Unity y C# para android.<br><br>
@@ -93,6 +95,58 @@
             </div>
         </div>
     </section>
+
+
+
+    <!-- Proyectos prueba -->
+
+    <section id="id-ProyectosPrueba">
+        <h1>Proyectos</h1>
+        <div class="galeria">
+            <div class="item" id="card1">
+                <h2>SIGG</h2>
+                <img class="Sistema" src="./src/public/img/Proyectos/SIGG-0.png" alt="">
+                <p>ERP personalizado abarcando modulos de control de inventarios, calidad y diversas herramientas para
+                    los departamentos de embarque y nominas.</p>
+
+                <div class="tecnologias">
+                    <img src="src/public/img/icons/nodedotjs.svg" alt="react">
+                    <img src="src/public/img/icons/bootstrap.svg" alt="react">
+                    <img src="src/public/img/icons/mysql.svg" alt="react">
+                </div>
+            </div>
+            <div class="item" id="card2">
+                <h2>Kiosko</h2>
+                <img class="Sistema" src="./src/public/img/Proyectos/Kiosko-0.png" alt="">
+                <p>Aplicacion para el control de solicitudes para prestamos y vacaciones.</p>
+
+                <div class="tecnologias">
+                    <img src="src/public/img/icons/nodedotjs.svg" alt="react">
+                    <img src="src/public/img/icons/ionic.svg" alt="react">
+                    <img src="src/public/img/icons/mysql.svg" alt="react">
+                </div>
+            </div>
+            <div class="item" id="card3">
+                <h2>Meli</h2>
+                <img class="Sistema" src="./src/public/img/Proyectos/Meli-0.png" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis sed placeat distinctio debitis.</p>
+            </div>
+            <div class="item" id="card3">
+                <h2>Promesa</h2>
+                <img class="Sistema" src="./src/public/img/Proyectos/Meli-0.png" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis sed placeat distinctio debitis.</p>
+            </div>
+            <div class="item" id="card3">
+                <h2>Unity</h2>
+                <img class="Sistema" src="./src/public/img/Proyectos/Meli-0.png" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis sed placeat distinctio debitis.</p>
+            </div>
+        </div>
+
+    </section>
+
+
+
 
     <!-- Proyectos -->
     <section id="id-Proyectos">
@@ -161,7 +215,11 @@
 
     <section id="id-Acerca" class="Acerca">
         <div id="Biografia" class="biografia">
-            <p>Hola mundo, soy Sergio Magaña, desarrollador fullstack jr. He creado diversos proyectos y me gustó que fueran en diferentes tecnologías, ya que eso me permitió descubrir en qué me gustaría enfocarme. <br>Desarrollé varias aplicaciones para uso personal e incursioné en el mundo del desarrollo de videojuegos. Cada proyecto ha sido un desafío y, sobre todo, una oportunidad de aprendizaje.</p>
+            <p>Hola mundo, soy Sergio Magaña, desarrollador fullstack jr. He creado diversos proyectos y me gustó que
+                fueran en diferentes tecnologías, ya que eso me permitió descubrir en qué me gustaría enfocarme.
+                <br>Desarrollé varias aplicaciones para uso personal e incursioné en el mundo del desarrollo de
+                videojuegos. Cada proyecto ha sido un desafío y, sobre todo, una oportunidad de aprendizaje.
+            </p>
         </div>
 
         <div class="Marquecina">
@@ -176,15 +234,18 @@
             </div>
             <div class="enlaces">
                 <a class="borde-rgb redes" href="https://github.com/MalwarePig" target="_blank">GITHUB<a>
-                <a class="borde-rgb redes" href="https://www.linkedin.com/in/sergio-osvaldo-maga%C3%B1a-gonzalez-aa5107340/" target="_blank">LINKEDIN</a>
-                <a class="borde-rgb redes " href="https://www.tiktok.com/@malwarepig?_t=ZS-8wwPDK3Lygi&_r=1" target="_blank">TIKTOK</a>
+                        <a class="borde-rgb redes"
+                            href="https://www.linkedin.com/in/sergio-osvaldo-maga%C3%B1a-gonzalez-aa5107340/"
+                            target="_blank">LINKEDIN</a>
+                        <a class="borde-rgb redes " href="https://www.tiktok.com/@malwarepig?_t=ZS-8wwPDK3Lygi&_r=1"
+                            target="_blank">TIKTOK</a>
             </div>
         </div>
     </section>
 
-<a href="#Inicio" class="home" id="home">
-  <i class="fas fa-long-arrow-alt-up"></i>
-</a>
+    <a href="#Inicio" class="home" id="home">
+        <i class="fas fa-long-arrow-alt-up"></i>
+    </a>
 
 </body>
 
