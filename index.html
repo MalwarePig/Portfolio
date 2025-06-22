@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./responsive.css">
+    <script src="./src/public/js/functions.js"></script>
+    <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+
+
+    <title>Sergio Magaña - Portafolio</title>
+</head>
+<!--  -->
+
+<body onload="Mensajes()">
+    <header>
+        <ul class="nav rgb-text">
+            <li><a href="#Inicio">&lt;-- Inicio</a></li>
+            <li><a href="#id-Experiencia"> Experiencia</a></li>
+            <li><a href="#id-Proyectos"> Proyectos</a></li>
+            <li><a href="#id-Acerca"> Acerca de... --&gt</a></li>
+        </ul>
+    </header>
+
+    <div class="Building">
+        <p>Design in progress</p><i id="terminal" class="fas fa-terminal"></i>
+    </div>
+
+    <!-- Inicio -->
+    <section id="Inicio" class="inicio">
+        <div class="inicio-info">
+            <div class="inicio-perfil ">
+                <img src="./src/public/img/avatar2.png" alt="Foto de perfil" class="perfil-img">
+            </div>
+            <div class="Nombre rgb-bg">
+                <h1>Sergio Magaña</h1>
+                <h2>Desarrollador fullstack jr.</h2>
+            </div>
+        </div>
+        <!--  -->
+
+        <div class="inicio-menu">
+            <ul class="menu">
+                <li><a href="#id-Experiencia" class="rgb-text">Experiencia</a></li>
+                <hr>
+                <li><a id="EnlaceDinamico" class="rgb-text">Proyectos</a></li>
+                <hr>
+                <li><a href="#id-Acerca" class="rgb-text">Acerca de...</a></li>
+            </ul>
+        </div>
+
+    </section>
+
+    <!-- Experiencia -->
+    <section id="id-Experiencia">
+        <h1>Mi experiencia</h1>
+        <div class="Experiencia ">
+            <div class='Exp-Backend'>
+                <h3>Backend</h3>
+                <p>
+                    Experiencia en desarrollo de APIs utilizando <span>Node.js</span> y <span>Express</span>.<br><br>
+                    Creación y consumo de APIs RESTful.<br><br>
+                    BBDD relacionales como <span>(SQL Server</span>, <span>MySQL</span> y
+                    <span>PostgreSQL)</span>, y NoSQL <span>(Firebase)</span>.
+                </p>
+            </div>
+
+            <div class='Exp-frontend'>
+                <h3>Frontend</h3>
+                <p>
+                    Conocimientos sólidos en tecnologías frontend como <span>HTML</span>, <span>CSS</span> y
+                    <span>JavaScript</span>.<br><br>
+                    Experiencia con frameworks como <span>Ionic</span> y <span>Electron</span>. <br>Librerías
+                    como <span>React</span>, <span>Bootstrap</span> y <span>Sass</span>.
+                </p>
+            </div>
+
+            <div class='Exp-Otros'>
+                <h3>Extras</h3>
+                <p>
+                    Capacitacion por CEDIS UANL en Java.<br><br>
+                    Prototipo de ERP en C# antes de ser migrado a JS.<br><br>
+                    Novela grafica usando Unity y C# para android.<br><br>
+
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Proyectos prueba -->
+
+    <section id="id-ProyectosMovil">
+        <h1>Proyectos</h1>
+        <div class="galeria">
+            <div class="item" id="card1">
+                <h2>SIGG</h2>
+                <img class="Sistema" src="./src/public/img/Proyectos/SIGG-0.png" alt="">
+                <p>ERP personalizado, modulos de control de inventarios, calidad, herramientas para departamento de
+                    embarque y nominas.</p>
+
+                <div class="tecnologias">
+                    <img src="src/public/img/icons/nodedotjs.svg" alt="react">
+                    <img src="src/public/img/icons/bootstrap.svg" alt="react">
+                    <img src="src/public/img/icons/mysql.svg" alt="react">
+                </div>
+            </div>
+            <div class="item" id="card2">
+                <h2>Kiosko</h2>
+                <img class="Sistema" src="./src/public/img/Proyectos/Kiosko-0.png" alt="">
+                <p>Aplicacion para el control de solicitudes para prestamos y vacaciones.</p>
+
+                <div class="tecnologias">
+                    <img src="src/public/img/icons/nodedotjs.svg" alt="react">
+                    <img src="src/public/img/icons/ionic.svg" alt="react">
+                    <img src="src/public/img/icons/mysql.svg" alt="react">
+                </div>
+            </div>
+            <div class="item" id="card3">
+                <h2>Meli</h2>
+                <img class="Sistema" src="./src/public/img/Proyectos/Meli-0.png" alt="">
+                <p>Control de asistencia y horarios de recorridos para conductores mediante codigos qr dinamicos. </p>
+                <div class="tecnologias">
+                    <img src="src/public/img/icons/nodedotjs.svg" alt="react">
+                    <img src="src/public/img/icons/react.svg" alt="react">
+                    <img src="src/public/img/icons/firebase.svg" alt="react">
+                </div>
+            </div>
+            <div class="item" id="card3">
+                <h2>Promesa</h2>
+                <img class="Sistema" src="./src/public/img/Proyectos/Promesa-0.png" alt="">
+                <p>Sistema para la creacion de cotizaciones, así como su historial por clientes.</p>
+                <div class="tecnologias">
+                    <img src="src/public/img/icons/nodedotjs.svg" alt="react">
+                    <img src="src/public/img/icons/electron.svg" alt="react">
+                    <img src="src/public/img/icons/sqlite.svg" alt="react">
+                </div>
+            </div>
+            <div class="item" id="card3">
+                <h2>Unity</h2>
+                <img class="Sistema" src="./src/public/img/Proyectos/Promesa-0.png" alt="">
+                <p>Juegos y novela grafica como proyectos personales.</p>
+                <div class="tecnologias">
+                    <img src="src/public/img/icons/unity.svg" alt="react">
+                    <img src="src/public/img/icons/sharp.svg" alt="react">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+    <!-- Proyectos -->
+    <section id="id-Proyectos">
+        <div class="Proyectos">
+            <!-- Galeria -->
+            <div class="galeria-proyectos">
+                <button class="galeria-btn galeria-btn-izq" onclick="anteriorImagen()">&#8592;</button>
+                <img id="galeria-img" class="galeria-img" src="./src/public/img/Proyectos/SIGG-0.png" alt="Proyecto">
+                <button class="galeria-btn galeria-btn-der" onclick="cambiarImagen()">&#8594;</button>
+            </div>
+
+            <!-- Lista -->
+            <div class="lista-proyectos">
+                <h3>Proyectos</h3>
+                <ul>
+                    <!-- sigg -->
+                    <li onclick="Galeria('SIGG')">
+                        <div>
+                            <h4>SIGG</h4>
+                        </div>
+                        <div>
+                            <h4 class="proyectos-tec">Node.js - Boostrap MySQL</h4>
+                        </div>
+                    </li>
+                    <!-- Tickets -->
+                    <li onclick="Galeria('Kiosko')">
+                        <div>
+                            <h4>Kiosko</h4>
+                        </div>
+                        <div>
+                            <h4 class="proyectos-tec">Node.js - Ionic - MySQL</h4>
+                        </div>
+                    </li>
+                    <!-- Meli -->
+                    <li onclick="Galeria('Meli')">
+                        <div>
+                            <h4>Meli</h4>
+                        </div>
+                        <div>
+                            <h4 class="proyectos-tec">Node.js - React - Firebase</h4>
+                        </div>
+                    </li>
+                    <!-- Promesa -->
+                    <li onclick="Galeria('Promesa')">
+                        <div>
+                            <h4>Promesa</h4>
+                        </div>
+                        <div>
+                            <h4 class="proyectos-tec">Node.js - Electron - SQLite</h4>
+                        </div>
+                    </li>
+                    <!-- Novela -->
+                    <li onclick="Galeria('Unity')">
+                        <div>
+                            <h4>Unity</h4>
+                        </div>
+                        <div>
+                            <h4 class="proyectos-tec">C#</h4>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="id-Acerca" class="Acerca">
+        <div id="Biografia" class="biografia">
+            <p>Hola mundo, soy Sergio Magaña, desarrollador fullstack jr. He creado diversos proyectos y me gustó que
+                fueran en diferentes tecnologías, ya que eso me permitió descubrir en qué me gustaría enfocarme.
+                <br>Desarrollé varias aplicaciones para uso personal e incursioné en el mundo del desarrollo de
+                videojuegos. Cada proyecto ha sido un desafío y, sobre todo, una oportunidad de aprendizaje.
+            </p>
+        </div>
+
+        <div class="Marquecina">
+            <p class="marcar-final rgb-text" id="CajaMensajes">Hola mundo!
+            </p>
+            <div class="Cursor-Estatico" id="Cursor"></div>
+        </div>
+
+        <div class="Contacto">
+            <div>
+                <p>Contactame: <span>osvaldodev92@gmail.com</span></p>
+            </div>
+            <div class="enlaces">
+                <a class="redes" href="https://github.com/MalwarePig" target="_blank">
+                    <img src="./src/public/img/icons/refinedgithub.svg" alt="">
+                    GITHUB<a>
+                        <a class="redes"
+                           href="https://www.linkedin.com/in/sergio-osvaldo-maga%C3%B1a-gonzalez-aa5107340/"
+                           target="_blank">
+                           <img src="./src/public/img/icons/linkedin50.svg" alt="">
+                           LINKEDIN</a>
+                        <a class="redes " href="https://www.tiktok.com/@malwarepig?_t=ZS-8wwPDK3Lygi&_r=1"
+                           target="_blank">
+                           <img src="./src/public/img/icons/tiktok.svg" alt="">
+                           TIKTOK</a>
+            </div>
+        </div>
+    </section>
+
+    <a href="#Inicio" class="home" id="home">
+        <i class="fas fa-long-arrow-alt-up"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="background">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+
+
+</body>
+
+
+
+</html>
