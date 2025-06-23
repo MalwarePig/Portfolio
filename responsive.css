@@ -360,11 +360,15 @@
   }
   .item-web:hover .info-web {
     background-color: #000; 
-    color: var(--green-neon);
+    color: #853bce;
+  }
+
+  .item-web:hover p {
+    color: var(--color-prim);
   }
 
   .item-web:hover h2 {
-    color: var(--color-prim);
+    color: var(--green-neon);
   }
 
   .item-web:hover .tecnologias-web img {
