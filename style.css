@@ -4,12 +4,18 @@
   --bg-sec: #0d0c14;
   --bg-ter: #171c31;
 
+  --color-dark: #1c2833 ;
   --color-prim: #f7f7f8;
   --color-sec: #a1a0ab;
   --color-ter: #853bce;
   --color-curta: #171c31;
   --border-gray: #211f2d;
+
+  --bg-img: #f3f3f3;
+  --green-neon: #00ffd0;
+  --red-neon: #ff2600;
 }
+
 
 html {
   scroll-behavior: smooth;
@@ -19,6 +25,7 @@ body {
  background-color: var(--bg-prim);   
   color: var(--color-prim);
   cursor: url('./src/public/img/cursor.png'), auto;
+    overflow-x: hidden;
 }
 
 header {
@@ -58,7 +65,7 @@ h3 {
 }
 
 .Building {
-  color: #00ffd0;
+  color: var(--green-neon);
   font-size: 0.6rem;
   position: fixed;
   margin-left: 30px;
@@ -184,12 +191,11 @@ hr {
 }
 
 /* ************************* */
+/* Experiencias */
 #id-Experiencia {
    scroll-margin-top: 25px;
 }
-/* Experiencias */
-
-
+  
 .Experiencia {
   display: flex;
   justify-content: center;
@@ -238,136 +244,97 @@ hr {
   text-align: left;
 }
 
+
 /* Proyectos y Galeria */
-#id-Proyectos {
-   scroll-margin-top: 25px;
+#id-Proyectos { 
    display: none;
-}
-.Proyectos {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+} 
+
+#id-ProyectosWeb { 
+   display: none;
+} 
+
+
+#id-ProyectosMovil {
+  scroll-snap-type: x mandatory;
+  scroll-padding: 24px; 
+   scroll-margin-top: 25px;
 }
 
-.galeria-proyectos {
-  position: relative;
+.galeria {
   display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  gap: 25px;
+  width: 95vw;
+}
+
+.item {
+  background-color: #f4f4f4;  
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 300px;
-  height: 300px;
-  background-color: #f3f3f3;
+  flex: 0 0 85%;
+  scroll-snap-align: center;
+  border: #6a00ff 1px solid;
   border-radius: 24px;
-  overflow: hidden;
+  margin: 10px;
+  max-height: 75vh;
 }
 
-.galeria-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  z-index: 0;
-}
-
-.galeria-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(20, 20, 30, 0.7);
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
+.galeria h2 {
+  padding: 15px;
+  color: #171c31;
+  font-family: "Roboto Mono", Poppins, "Courier New", Courier, monospace;
   font-size: 2rem;
-  cursor: pointer;
-  z-index: 2;
-  transition: background 0.2s, transform 0.2s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-weight: bold;
+  margin: 0px;
 }
 
-.galeria-btn-izq {
-  left: 16px;
-}
-
-.galeria-btn-der {
-  right: 16px;
-}
-
-.galeria-btn:hover {
-  background: #853bce;
-  transform: translateY(-50%) scale(1.1);
-}
-
-.lista-proyectos {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  margin-top: 10%;
-}
-
-.lista-proyectos ul {
-  width: 100%;
-  padding: 0;
-  margin: 5px 0px;
-  /*  padding: 0 auto; */
-}
-
-.lista-proyectos li {
-  display: flex;
-  width: 100%;
-  min-height: 40px;
-  box-sizing: border-box;
-  border-top: 2px solid var(--color-ter);
-  /* Cambia el color y grosor a tu gusto */
-}
-
-.lista-proyectos li:hover {
-  cursor: pointer;
-  animation: Listados 1s infinite;
-}
-
-@keyframes Listados {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.1);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-/* .lista-proyectos li > div {
-  flex: 1;
-  height: 100%;
-  min-height: 100%;
-} */
-.lista-proyectos li > div h4 {
+.item p {
+  font-family: "Roboto Mono", Poppins, "Courier New", Courier, monospace;
+  font-size: 0.9rem;
+  color: var(--color-sec);
+  line-height: 1.5rem;
+  font-weight: bold;
   text-align: left;
-  font-size: 0.8rem;
+  margin-top: 20px;
+  padding: 0 25px;
 }
 
-.lista-proyectos li > div:first-child,
-.lista-proyectos li > div:last-child {
+.Sistema {
+  width: 100%;
+  height: 50%;
+  object-fit: contain;
+  border-top: 1px solid var(--color-ter);
+  border-bottom: 1px solid var(--color-ter);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.tecnologias {
+  background-color: #e6e6e6;;
+  margin-top: 20px;
   display: flex;
-  align-items: flex-end; /* Valor correcto */
-  justify-content: flex-start;
-  height: 100%;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 50%; 
+  backdrop-filter: blur(9px);
+  border-radius: 24px;
+  margin-top: auto;
+  margin-bottom: 20px;
+  padding: 0 15px;
 }
 
-.lista-proyectos li > div:first-child {
-  flex: 0.8;
+.tecnologias img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  padding: 10px 0;
 }
 
-.lista-proyectos li > div:last-child {
-  flex: 2.2;
-}
+ 
+  
 
 /* Acerca de */
 .Acerca {
@@ -453,7 +420,22 @@ hr {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 50px; 
+  font-size: 1rem;
+}
+
+
+
+.email{
+   font-size: 1.2rem;
+    color: #fff;
+    text-shadow:
+    0 0 1px #0ff,
+    0 0 1px #0ff,
+    0 0 1px #0ff,
+    0 0 1px #0ff,
+    0 0 10px #0ff;
+     text-decoration: none;
 }
 
 .enlaces { 
@@ -480,8 +462,14 @@ hr {
 
 .redes:hover {
   background: var(--color-ter);
-  color: #030303;
-  border-color: var(--color-ter);
+  color: #fff;
+    border-color: #00ffdd;
+    text-shadow:
+    0 0 1px #0ff,
+    0 0 1px #0ff,
+    0 0 1px #0ff,
+    0 0 1px #0ff,
+    0 0 10px #0ff;
 }
 
 .redes img {
@@ -652,135 +640,3 @@ hr {
   opacity: 0;
   pointer-events: none;
 }
-
-#id-ProyectosMovil {
-  scroll-snap-type: x mandatory;
-  scroll-padding: 24px; 
-   scroll-margin-top: 25px;
-}
-
-.galeria {
-  display: flex;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  gap: 25px;
-  width: 100vw;
-}
-
-.item {
-  background-color: #f4f4f4;  
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 0 0 85%;
-  scroll-snap-align: center;
-  border: #6a00ff 1px solid;
-  border-radius: 24px;
-  margin: 10px;
-  max-height: 75vh;
-}
-
-.galeria h2 {
-  padding: 15px;
-  color: #171c31;
-  font-family: "Roboto Mono", Poppins, "Courier New", Courier, monospace;
-  font-size: 2rem;
-  font-weight: bold;
-  margin: 0px;
-}
-
-.item p {
-  font-family: "Roboto Mono", Poppins, "Courier New", Courier, monospace;
-  font-size: 0.9rem;
-  color: var(--color-sec);
-  line-height: 1.5rem;
-  font-weight: bold;
-  text-align: left;
-  margin-top: 20px;
-  padding: 0 25px;
-}
-
-.Sistema {
-  width: 100%;
-  height: 50%;
-  object-fit: contain;
-  border-top: 1px solid var(--color-ter);
-  border-bottom: 1px solid var(--color-ter);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-}
-
-.tecnologias {
-  background-color: #e6e6e6;;
-  margin-top: 20px;
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  width: 50%; 
-  backdrop-filter: blur(9px);
-  border-radius: 24px;
-  margin-top: auto;
-  margin-bottom: 20px;
-  padding: 0 15px;
-}
-
-.tecnologias img {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-  padding: 10px 0;
-}
-
-
-
-
-
-
-
-.background {  
-            position: fixed;
-            overflow: hidden;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background: linear-gradient(to right, var(--bg-prim), var(--bg-prim));
-            display: flex;
-            flex-grow: 1; 
-            z-index: -1; /* Asegura que el fondo esté detrás de otros elementos */
-        }
-
-        .background div {
-            position: absolute;
-            border-radius: 100%;
-            height: 0;
-            filter: blur(30vw);
-            opacity: 0.9;
-        }
-
-        .background div:nth-child(1) {
-            background: linear-gradient(132deg, #1FCFC3 60.00%, #1F91CF 100.00%);
-            width: 30%;
-            padding-top: 30%;
-            left: 23%;
-            top: 30%;
-            transform: translateX(-50%) translateY(-50%);
-        }
-
-        .background div:nth-child(2) {
-            background: linear-gradient(132deg, #0800FF 0.00%, #E32BE3 100.00%);
-            width: 40%;
-            padding-top: 40%;
-            left: 50%;
-            top: 50%;
-            transform: translateX(-50%) translateY(-50%);
-        }
-
-        .background div:nth-child(3) {
-            background: linear-gradient(132deg, #1FCFC3 0.00%, #1F91CF 100.00%);
-            width: 30%;
-            padding-top: 30%;
-            left: 80%;
-            top: 80%;
-            transform: translateX(-50%) translateY(-50%);
-        }

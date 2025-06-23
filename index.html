@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="./responsive.css">
     <script src="./src/public/js/functions.js"></script>
     <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap&display=swap"
-          rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
 
+    <meta name="description" content="Portafolio personal">
 
     <title>Sergio Magaña - Portafolio</title>
 </head>
@@ -23,7 +24,7 @@
         <ul class="nav rgb-text">
             <li><a href="#Inicio">&lt;-- Inicio</a></li>
             <li><a href="#id-Experiencia"> Experiencia</a></li>
-            <li><a href="#id-Proyectos"> Proyectos</a></li>
+            <li><a href="#id-ProyectosWeb"> Proyectos</a></li>
             <li><a href="#id-Acerca"> Acerca de... --&gt</a></li>
         </ul>
     </header>
@@ -36,7 +37,7 @@
     <section id="Inicio" class="inicio">
         <div class="inicio-info">
             <div class="inicio-perfil ">
-                <img src="./src/public/img/avatar2.png" alt="Foto de perfil" class="perfil-img">
+                <img src="./src/public/img/avatar2.webp" alt="Foto de perfil" class="perfil-img">
             </div>
             <div class="Nombre rgb-bg">
                 <h1>Sergio Magaña</h1>
@@ -49,7 +50,7 @@
             <ul class="menu">
                 <li><a href="#id-Experiencia" class="rgb-text">Experiencia</a></li>
                 <hr>
-                <li><a id="EnlaceDinamico" class="rgb-text">Proyectos</a></li>
+                <li><a href="#id-ProyectosWeb" id="EnlaceDinamico" class="rgb-text">Proyectos</a></li>
                 <hr>
                 <li><a href="#id-Acerca" class="rgb-text">Acerca de...</a></li>
             </ul>
@@ -95,14 +96,13 @@
 
 
 
-    <!-- Proyectos prueba -->
-
+    <!-- Proyectos  Moviles -->
     <section id="id-ProyectosMovil">
         <h1>Proyectos</h1>
         <div class="galeria">
             <div class="item" id="card1">
                 <h2>SIGG</h2>
-                <img class="Sistema" src="./src/public/img/Proyectos/SIGG-0.png" alt="">
+                <img class="Sistema" src="./src/public/img/Proyectos/SIGG-0.webp" alt="SIGG">
                 <p>ERP personalizado, modulos de control de inventarios, calidad, herramientas para departamento de
                     embarque y nominas.</p>
 
@@ -114,7 +114,7 @@
             </div>
             <div class="item" id="card2">
                 <h2>Kiosko</h2>
-                <img class="Sistema" src="./src/public/img/Proyectos/Kiosko-0.png" alt="">
+                <img class="Sistema" src="./src/public/img/Proyectos/Kiosko-0.webp" alt="Kiosko">
                 <p>Aplicacion para el control de solicitudes para prestamos y vacaciones.</p>
 
                 <div class="tecnologias">
@@ -125,7 +125,7 @@
             </div>
             <div class="item" id="card3">
                 <h2>Meli</h2>
-                <img class="Sistema" src="./src/public/img/Proyectos/Meli-0.png" alt="">
+                <img class="Sistema" src="./src/public/img/Proyectos/Meli-0.webp" alt="Meli">
                 <p>Control de asistencia y horarios de recorridos para conductores mediante codigos qr dinamicos. </p>
                 <div class="tecnologias">
                     <img src="src/public/img/icons/nodedotjs.svg" alt="react">
@@ -135,7 +135,7 @@
             </div>
             <div class="item" id="card3">
                 <h2>Promesa</h2>
-                <img class="Sistema" src="./src/public/img/Proyectos/Promesa-0.png" alt="">
+                <img class="Sistema" src="./src/public/img/Proyectos/Promesa-0.pwebpng" alt="Promesa">
                 <p>Sistema para la creacion de cotizaciones, así como su historial por clientes.</p>
                 <div class="tecnologias">
                     <img src="src/public/img/icons/nodedotjs.svg" alt="react">
@@ -145,7 +145,7 @@
             </div>
             <div class="item" id="card3">
                 <h2>Unity</h2>
-                <img class="Sistema" src="./src/public/img/Proyectos/Promesa-0.png" alt="">
+                <img class="Sistema" src="./src/public/img/Proyectos/Promesa-0.webp" alt="Unity">
                 <p>Juegos y novela grafica como proyectos personales.</p>
                 <div class="tecnologias">
                     <img src="src/public/img/icons/unity.svg" alt="react">
@@ -158,71 +158,93 @@
 
 
 
+    <section id="id-ProyectosWeb">
+        <h1>Proyectos Web</h1>
+        <div class="galeria-web">
+            <div class="item-web">
+                <img class="Sistema-web" src="./src/public/img/Proyectos/SIGG-0.webp" alt="SIGG">
 
-    <!-- Proyectos -->
-    <section id="id-Proyectos">
-        <div class="Proyectos">
-            <!-- Galeria -->
-            <div class="galeria-proyectos">
-                <button class="galeria-btn galeria-btn-izq" onclick="anteriorImagen()">&#8592;</button>
-                <img id="galeria-img" class="galeria-img" src="./src/public/img/Proyectos/SIGG-0.png" alt="Proyecto">
-                <button class="galeria-btn galeria-btn-der" onclick="cambiarImagen()">&#8594;</button>
+                <div class="info-web">
+                    <h2>SIGG</h2>
+                    <p>ERP personalizado, control de inventarios, calidad, herramientas de embarque y nominas.</p>
+
+                    <div class="tecnologias-web">
+                        <img src="src/public/img/icons/nodedotjs.svg" alt="html5">
+                        <img src="src/public/img/icons/bootstrap.svg" alt="css3">
+                        <img src="src/public/img/icons/mysql.svg" alt="javascript">
+                    </div>
+                </div>
+
             </div>
+            <div class="item-web">
+                <img class="Sistema-web" src="./src/public/img/Proyectos/Kiosko-0.webp" alt="Kiosko">
+                <div class="info-web">
+                    <h2>Kiosko</h2>
+                    <p>Aplicacion para el control de solicitudes para prestamos y vacaciones.</p>
 
-            <!-- Lista -->
-            <div class="lista-proyectos">
-                <h3>Proyectos</h3>
-                <ul>
-                    <!-- sigg -->
-                    <li onclick="Galeria('SIGG')">
-                        <div>
-                            <h4>SIGG</h4>
-                        </div>
-                        <div>
-                            <h4 class="proyectos-tec">Node.js - Boostrap MySQL</h4>
-                        </div>
-                    </li>
-                    <!-- Tickets -->
-                    <li onclick="Galeria('Kiosko')">
-                        <div>
-                            <h4>Kiosko</h4>
-                        </div>
-                        <div>
-                            <h4 class="proyectos-tec">Node.js - Ionic - MySQL</h4>
-                        </div>
-                    </li>
-                    <!-- Meli -->
-                    <li onclick="Galeria('Meli')">
-                        <div>
-                            <h4>Meli</h4>
-                        </div>
-                        <div>
-                            <h4 class="proyectos-tec">Node.js - React - Firebase</h4>
-                        </div>
-                    </li>
-                    <!-- Promesa -->
-                    <li onclick="Galeria('Promesa')">
-                        <div>
-                            <h4>Promesa</h4>
-                        </div>
-                        <div>
-                            <h4 class="proyectos-tec">Node.js - Electron - SQLite</h4>
-                        </div>
-                    </li>
-                    <!-- Novela -->
-                    <li onclick="Galeria('Unity')">
-                        <div>
-                            <h4>Unity</h4>
-                        </div>
-                        <div>
-                            <h4 class="proyectos-tec">C#</h4>
-                        </div>
-                    </li>
-                </ul>
+                    <div class="tecnologias-web">
+                        <img src="src/public/img/icons/nodedotjs.svg" alt="html5">
+                        <img src="src/public/img/icons/ionic.svg" alt="css3">
+                        <img src="src/public/img/icons/mysql.svg" alt="javascript">
+                    </div>
+                </div>
+            </div>
+            <div class="item-web">
+                <img class="Sistema-web" src="./src/public/img/Proyectos/Meli-0.webp" alt="Meli">
+                <div class="info-web">
+                    <h2>Meli</h2>
+                    <p>Control de asistencia y horarios de recorridos para conductores mediante codigos qr dinamicos.
+                    </p>
+
+                    <div class="tecnologias-web">
+                        <img src="src/public/img/icons/nodedotjs.svg" alt="html5">
+                        <img src="src/public/img/icons/react.svg" alt="css3">
+                        <img src="src/public/img/icons/firebase.svg" alt="javascript">
+                    </div>
+                </div>
+            </div>
+            <div class="item-web">
+                <img class="Sistema-web" src="./src/public/img/Proyectos/Promesa-0.webp" alt="Promesa">
+                <div class="info-web">
+                    <h2>Promesa</h2>
+                    <p>Sistema para la creacion de cotizaciones, así como su historial por clientes.</p>
+
+                    <div class="tecnologias-web">
+                        <img src="src/public/img/icons/nodedotjs.svg" alt="html5">
+                        <img src="src/public/img/icons/electron.svg" alt="css3">
+                        <img src="src/public/img/icons/sqlite.svg" alt="javascript">
+                    </div>
+                </div>
+            </div>
+            <div class="item-web">
+                <img class="Sistema-web" src="./src/public/img/Proyectos/SIGG-1.webp" alt="CIDHN">
+                <div class="info-web">
+                    <h2>CIDHN</h2>
+                    <p>Sitio web personlaizado y dinamico para la comision de derechos humanos region noreste</p>
+
+                    <div class="tecnologias-web">
+                        <img src="src/public/img/icons/html5.svg" alt="html5">
+                        <img src="src/public/img/icons/htmx.svg" alt="html5">
+                        <img src="src/public/img/icons/css.svg" alt="css3">
+
+                    </div>
+                </div>
+            </div>
+            <div class="item-web">
+                <img class="Sistema-web" src="./src/public/img/Proyectos/Promesa-1.webp" alt="Unity">
+                <div class="info-web">
+                    <h2>Unity</h2>
+                    <p>Juegos y novela grafica como proyectos personales.</p>
+
+                    <div class="tecnologias-web">
+                        <img src="src/public/img/icons/unity.svg" alt="html5">
+                        <img src="src/public/img/icons/c.svg" alt="css3">
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
 
+    </section>
 
     <section id="id-Acerca" class="Acerca">
         <div id="Biografia" class="biografia">
@@ -241,21 +263,12 @@
 
         <div class="Contacto">
             <div>
-                <p>Contactame: <span>osvaldodev92@gmail.com</span></p>
+                <p>Contactame: <a class="email" target="_blank" href="mailto:osvaldodev92@gmail.com">osvaldodev92@gmail.com</a></p>
             </div>
             <div class="enlaces">
-                <a class="redes" href="https://github.com/MalwarePig" target="_blank">
-                    <img src="./src/public/img/icons/refinedgithub.svg" alt="">
-                    GITHUB<a>
-                        <a class="redes"
-                           href="https://www.linkedin.com/in/sergio-osvaldo-maga%C3%B1a-gonzalez-aa5107340/"
-                           target="_blank">
-                           <img src="./src/public/img/icons/linkedin50.svg" alt="">
-                           LINKEDIN</a>
-                        <a class="redes " href="https://www.tiktok.com/@malwarepig?_t=ZS-8wwPDK3Lygi&_r=1"
-                           target="_blank">
-                           <img src="./src/public/img/icons/tiktok.svg" alt="">
-                           TIKTOK</a>
+                <a class="redes" href="https://github.com/MalwarePig" target="_blank">  <img src="./src/public/img/icons/refinedgithub.svg" alt="github"> GITHUB</a>
+                <a class="redes" href="https://www.linkedin.com/in/sergio-osvaldo-maga%C3%B1a-gonzalez-aa5107340/" target="_blank"> <img src="./src/public/img/icons/linkedin50.svg" alt="linkedin"> LINKEDIN</a>
+                <a class="redes" href="https://www.tiktok.com/@malwarepig?_t=ZS-8wwPDK3Lygi&_r=1" target="_blank"> <img src="./src/public/img/icons/tiktok.svg" alt="tiktok"> TIKTOK</a>
             </div>
         </div>
     </section>
@@ -263,34 +276,8 @@
     <a href="#Inicio" class="home" id="home">
         <i class="fas fa-long-arrow-alt-up"></i>
     </a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
+ 
 
     <div class="background">
         <div></div>

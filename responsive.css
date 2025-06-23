@@ -2,7 +2,6 @@
   body {
     background-color: var(--bg-prim);
     color: var(--color-prim);
-
   }
 
   header {
@@ -32,7 +31,7 @@
   }
 
   .Building {
-    color: #ff2600;
+    color: var(--red-neon);
     /* color rojo */
     font-size: 1rem;
     position: fixed;
@@ -153,7 +152,7 @@
     cursor: pointer;
   }
 
-  .menu li>a {
+  .menu li > a {
     width: 100%;
     /*  height: auto; */
     text-decoration: none;
@@ -175,19 +174,21 @@
     overflow: hidden;
   }
 
-  .menu li>a::after {
+  .menu li > a::after {
     content: "";
     position: absolute;
     left: 0;
     bottom: 5px;
     width: 100%;
     height: 6px;
-    background: linear-gradient(90deg,
-        #ff005a,
-        #00ffd0,
-        #00aaff,
-        #853bce,
-        #ff005a);
+    background: linear-gradient(
+      90deg,
+      #ff005a,
+      #00ffd0,
+      #00aaff,
+      #853bce,
+      #ff005a
+    );
     border-radius: 3px;
     transform: scaleX(0);
     transform-origin: left;
@@ -195,7 +196,7 @@
     z-index: 0;
   }
 
-  .menu li>a:hover::after {
+  .menu li > a:hover::after {
     transform: scaleX(1);
   }
 
@@ -206,7 +207,6 @@
     border: none;
     margin: 20px auto;
   }
-
 
   /* Experiencias */
   #id-Experiencia h1 {
@@ -222,15 +222,15 @@
   }
 
   .Exp-Backend {
-    background-image: url('./src/public/img/icons/javascript.svg');
+    background-image: url("./src/public/img/icons/javascript.svg");
   }
 
   .Exp-frontend {
-    background-image: url('./src/public/img/icons/htmx.svg');
+    background-image: url("./src/public/img/icons/htmx.svg");
   }
 
   .Exp-Otros {
-    background-image: url('./src/public/img/icons/unity.svg');
+    background-image: url("./src/public/img/icons/unity.svg");
   }
 
   .Exp-Backend,
@@ -275,147 +275,102 @@
     display: none;
   }
 
-  #id-Proyectos {
+  /* Proyectos web */
+  #id-ProyectosWeb {
     padding-top: 0 !important;
     display: block;
     scroll-margin-top: 100px;
     margin-top: 20px;
   }
 
-  .Proyectos {
+  .galeria-web {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items: center;
   }
 
-  .galeria-proyectos {
-    position: relative;
+  .item-web {
+    flex: 1 0 30%; /* ← 30% deja 3 columnas aprox */
+    height: 300px;
+    color: var(--color-sec);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 700px;
-    height: 700px;
-
     border-radius: 24px;
     overflow: hidden;
+    margin: 20px;
+    transition: transform 0.4s ease; /* transición suave */ 
   }
 
-  .galeria-img {
-    width: 100%;
+  .item-web img {
+    width: 50%;
+    background-color: var(--bg-img);
+    position: relative;
+    top: 0; 
     height: 100%;
-    object-fit: contain;
-    z-index: 0;
+    object-fit: contain; 
   }
 
-  .galeria-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(20, 20, 30, 0.7);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    font-size: 2rem;
-    cursor: pointer;
-    z-index: 2;
-    transition: background 0.2s, transform 0.2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .galeria-btn-izq {
-    left: 16px;
-  }
-
-  .galeria-btn-der {
-    right: 16px;
-  }
-
-  .galeria-btn:hover {
-    background: #853bce;
-    transform: translateY(-50%) scale(1.1);
-  }
-
-  .lista-proyectos {
-    width: 700px;
-    height: 700px;
+  .info-web {
+    width: 50%;
+     height: 100%;
+    background-color: var(--bg-img); 
     display: flex;
     flex-direction: column;
-    margin-top: 0;
+   
   }
 
-  .lista-proyectos ul {
-    width: 100%;
-    padding: 0;
-    margin: 20px 0px;
+  .info-web h2 {
+    font-family: "Roboto Mono", Poppins, "Bebas Neue", "Courier New";
+    color: black;
+    font-size: 2.5rem;
+    margin: 0;
+    margin: 20px 0 0 0;
+    text-align: center;
   }
 
-  .lista-proyectos li {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    min-height: 40px;
-    box-sizing: border-box;
-    font-size: 2rem;
-    border-top: 2px solid var(--color-ter);
-    /* Cambia el color y grosor a tu gusto */
+  .info-web p {
+    font-family: "Roboto Mono", Poppins, "Courier New";
+    color: var(--color-dark);
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    margin-top: 10px;
+    padding: 0 10px;
+    text-align: start;
   }
 
-  .lista-proyectos li:hover {
+  .tecnologias-web {
+    margin-top: auto;
+    margin-bottom: 20px;
+  }
+  .info-web img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    margin: 10px 10px;
+    transition: filter 0.2s ease;
+    filter: invert(0); /* <-- estado base definido */
+  }
+
+  .item-web:hover {
+    border: 1px solid var(--green-neon);
     cursor: pointer;
-    animation: Listados 1s infinite;
+    transform: scale(1.05); /* aplica el zoom al pasar el mouse */
+  }
+  .item-web:hover .info-web {
+    background-color: #000; 
+    color: var(--green-neon);
   }
 
-  .lista-proyectos h4 {
-    font-size: 2rem;
+  .item-web:hover h2 {
+    color: var(--color-prim);
   }
 
-  @keyframes Listados {
-    0% {
-      transform: scale(1);
-    }
-
-    50% {
-      transform: scale(1.1);
-    }
-
-    100% {
-      transform: scale(1);
-    }
-  }
-
-  /* .lista-proyectos li > div {
-  flex: 1;
-} */
-  .lista-proyectos li>div h4 {
-    text-align: left;
-    font-size: 1.8rem;
-  }
-
-  .lista-proyectos li>div:first-child {
-    flex: 1;
-    display: flex;
-    align-items: end;
-    /* Centra el contenido verticalmente */
-    justify-content: start;
-    /* Centra el contenido horizontalmente */
-  }
-
-  .lista-proyectos li>div:last-child {
-    flex: 2;
-    display: flex;
-    align-items: flex-start;
-    /* Centra el contenido verticalmente */
-    justify-content: start;
-    /* Centra el contenido horizontalmente */
-  }
-
-  .proyectos-tec {
-    font-size: 1.5rem;
+  .item-web:hover .tecnologias-web img {
+    /* filter: invert(0.8) sepia(0.9) hue-rotate(150deg) saturate(9); */
+    filter: invert(1);
+    transition: filter 0.2s;
   }
 
   /* Acerca de */
@@ -429,7 +384,6 @@
     align-items: center;
     flex-direction: column;
     padding-bottom: 0px;
-
   }
 
   .biografia {
@@ -516,9 +470,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     margin-top: auto;
     margin-bottom: 5%;
+    font-size: 2rem;
+  }
+
+  .email {
+    font-size: 2.2rem;
+    color: #fff;
+    text-shadow: 0 0 1px #0ff, 0 0 1px #0ff, 0 0 1px #0ff, 0 0 1px #0ff,
+      0 0 10px #0ff;
+    cursor: pointer;
+    text-decoration: none;
   }
 
   .redes {
@@ -531,84 +494,102 @@
     width: 100%;
     height: 44px;
     border-radius: 24px;
-    padding: 0 20px;
+    padding: 10px 20px;
     cursor: pointer;
     margin: 10px 10px;
-    font-size: 1rem;
+    font-size: 2.5rem;
     gap: 8px;
     transition: background 0.2s, color 0.2s;
+    text-decoration: none;
   }
 
   .redes:hover {
     background: var(--color-ter);
-    color: #fff ;
+    color: #fff;
     border-color: #00ffdd;
+    text-shadow: 0 0 1px #0ff, 0 0 1px #0ff, 0 0 1px #0ff, 0 0 1px #0ff,
+      0 0 10px #0ff;
   }
 
   .redes img {
-    width: 24px;
-    height: 24px; 
+    width: 48px;
+    height: 48px;
   }
- .redes:hover img {
-  filter: invert(1);
-  transition: filter 0.2s; 
-}
+  .redes:hover img {
+    filter: invert(1);
+    transition: filter 0.2s;
+  }
 
   /* Efectos */
- 
-
 }
 
-
-
-
-
-
+/* Fondo animado */
 .background {
   position: fixed;
-  overflow: hidden;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   background: linear-gradient(to right, var(--bg-prim), var(--bg-prim));
   display: flex;
-  flex-grow: 1;
   z-index: -1;
-  /* Asegura que el fondo esté detrás de otros elementos */
+  pointer-events: none; /* evita que interfiera con clics */
 }
 
+/* Círculos animados */
 .background div {
   position: absolute;
-  border-radius: 100%;
-  height: 0;
-  filter: blur(90vw);
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  filter: blur(20vw);
   opacity: 0.3;
 }
 
+/* Animaciones personalizadas */
+@keyframes float1 {
+  0%   { transform: translate(-50%, -50%) translateX(0); }
+  50%  { transform: translate(-50%, -50%) translateX(20px) translateY(10px); }
+  100% { transform: translate(-50%, -50%) translateX(0); }
+}
+
+@keyframes float2 {
+  0%   { transform: translate(-50%, -50%) translateX(0); }
+  50%  { transform: translate(-50%, -50%) translateX(-15px) translateY(-20px); }
+  100% { transform: translate(-50%, -50%) translateX(0); }
+}
+
+@keyframes float3 {
+  0%   { transform: translate(-50%, -50%) scale(1); }
+  50%  { transform: translate(-50%, -50%) scale(1.1) translateY(15px); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+/* Círculo 1 */
 .background div:nth-child(1) {
-  background: linear-gradient(132deg, #1FCFC3 60.00%, #1F91CF 100.00%);
+  background: linear-gradient(132deg, #1fcfc3 60%, #1f91cf 100%);
   width: 30%;
-  padding-top: 30%;
   left: 23%;
   top: 30%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translate(-50%, -50%);
+  animation: float1 12s ease-in-out infinite;
 }
 
+/* Círculo 2 */
 .background div:nth-child(2) {
-  background: linear-gradient(132deg, #0800FF 0.00%, #E32BE3 100.00%);
+  background: linear-gradient(132deg, #0800ff 0%, #e32be3 100%);
   width: 40%;
-  padding-top: 40%;
   left: 50%;
   top: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translate(-50%, -50%);
+  animation: float2 15s ease-in-out infinite;
 }
 
+/* Círculo 3 */
 .background div:nth-child(3) {
-  background: linear-gradient(132deg, #1FCFC3 0.00%, #1F91CF 100.00%);
+  background: linear-gradient(132deg, #1fcfc3 0%, #1f91cf 100%);
   width: 30%;
-  padding-top: 30%;
   left: 80%;
   top: 80%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translate(-50%, -50%);
+  animation: float3 10s ease-in-out infinite;
 }

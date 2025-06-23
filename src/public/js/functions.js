@@ -84,7 +84,7 @@ function Mensajes() {
 document.addEventListener('DOMContentLoaded', () => {
     if (window.matchMedia("(min-width: 1024px)").matches) {
         var enlace = document.getElementById('EnlaceDinamico');
-        enlace.href = '#id-Proyectos';
+        enlace.href = '#id-ProyectosWeb';
     } else {
         var enlace = document.getElementById('EnlaceDinamico');
         enlace.href = '#id-ProyectosMovil';
